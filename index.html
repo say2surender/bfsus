@@ -4,12 +4,23 @@
 </head>
 
 <body>
-    <script type="text/javascript" src="https://botplatform.io/chat/plugin-v2.js?bot=bot_1503454746021"></script>
-    <script type="text/javascript">
-        window.botplatform.init({
-            name: 'tarun'
-        });
-    </script>
+
+<script type="text/javascript" src="https://botplatform.io/chat/plugin-v2.js?bot=bot_1503454746021"></script>
+<script type="text/javascript">
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+window.botplatform.init({
+    name: getUrlVars()["name"]
+});
+
+</script>
 </body>
 </html>
 
